@@ -1,0 +1,287 @@
+
+body { 
+    margin: 3px; 
+    background: #e6e6e6; 
+    font: 8pt Arial;
+    color: Black;
+}
+#menu {
+    position: absolute; /* Фиксированное положение */
+    left: 3px; 
+    top: 3px; 
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffd9; 
+    color: #3366ff; 
+    right: 3px; /* Ширина слоя */
+    height: 80px; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    /* margin-top: -50%;
+    /* text-align:center; */
+}
+#submenu {
+    position: absolute; /* Фиксированное положение */
+    padding: 15px; /* Поля вокруг текста */
+    background: #ffffd9; 
+    color: #3366ff; 
+    width: 150px; /* Ширина слоя */
+    top: 97px; 
+    bottom: 25px; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    line-height: 15pt;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.a_button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button {
+    cursor: pointer;
+    position: absolute;
+    /*left:10px;
+    top: 10px;*/
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+}
+
+#data {
+    position: absolute; /* Фиксированное положение */
+    left: 188px; 
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    top: 97px;
+    bottom: 25px;
+    right: 3px; /* Ширина слоя */
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+}
+#detail, #newproject {
+    position: absolute; /* Фиксированное положение */
+    left: 350px; 
+    top: 70px;
+    width: 700px;
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+}
+#view_sub_works {
+    position: absolute; /* Фиксированное положение */
+    left: 480px; 
+    top: 90px;
+    /*bottom: 75px;*/
+    width: 500px;
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    overflow: auto;
+}
+#change_sub_works {
+    position: absolute;
+    left: 750px; 
+    top: 60px;
+    padding: 5px;
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    overflow: none;
+}
+
+.inner_table_scroll {
+    position: static;
+    height: 480px;
+    background: #ffffff; 
+    color: #3366ff; 
+    overflow: auto;
+}
+
+#change_v_o_m {
+    position: absolute; /* Фиксированное положение */
+    left: 480px; 
+    top: 90px;
+    /*bottom: 75px;
+    width: 500px;*/
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    overflow: auto;
+}
+#change_o_m {
+    position: absolute; /* Фиксированное положение */
+    left: 750px; 
+    top: 60px;
+    /*bottom: 65px;
+    height: 500px;*/
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    overflow: none;
+}
+
+#change_numeric, #modal, #change_data {
+    position: absolute; /* Фиксированное положение */
+    left: 50px; 
+    top: 70px;
+    width: 215px;
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+}
+#change_numeric button {
+    position: absolute; 
+    left: 70px;
+    top: 70px;
+    padding: 5px; 
+    font: 8pt Arial;
+}
+
+#change_firm {
+    position: absolute; /* Фиксированное положение */
+    left: 50px; 
+    top: 70px;
+    width: 215px;
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+}
+#change_firm button {
+    position: absolute; 
+    left: 70px;
+    top: 70px;
+    padding: 5px; 
+    font: 8pt Arial;
+}
+#change_operator {
+    position: absolute; /* Фиксированное положение */
+    width: 215px;
+    height: 150px;
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    line-height: 15pt;
+    overflow: auto;
+}
+#change_operator button {
+    position: absolute; 
+    left: 70px;
+    top: 70px;
+    padding: 5px; 
+    font: 8pt Arial;
+}
+
+td a {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #aeb0b3;
+    font: 8pt Arial;
+    color: Black;
+}
+
+textarea {
+    overflow: auto;
+    resize: auto;  
+    width: 677px;
+}
+
+.caption {
+    background-color: gray;
+    font: 10pt Arial;
+    color: White;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline-block;
+
+}
+
+.close {float: right;}
+
+#newComment{
+    position: absolute; /* Фиксированное положение */
+    left: 350px; 
+    top: 170px;
+/*    height: 675px;
+    width: 700px;*/
+    padding: 5px; /* Поля вокруг текста */
+    background: #ffffff; 
+    color: #3366ff; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+}
+.comments{
+    position: static; /* Фиксированное положение */
+    width: 677px;
+    height: 150px;
+    background: #ffffff; 
+    color: #3366ff; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aeb0b3;
+    line-height: 15pt;
+    overflow: auto;
+}

@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Vladislav A. Korenev">
+        <title>Отдел развития</title>
+        <link href="_css/default.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-3.2.1.js"  crossorigin="anonymous"></script>
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+        <script src="_js/default.js"></script>
+    </head>
+    <body>
+        <div id="menu" class="">
+            <div id="Projects" class="Button" style="top: 5px; line-height: 100pt; background: url(_img/worker.png) repeat 0 0;">
+                <center><a href="#" id="getContent1">Проекты</a></center>
+            </div>
+            <div id="Tarrifs" class="Button" style="top: 5px; left: 95px; line-height: 100pt; background: url(_img/money.png) repeat 0 0;">
+                <center><a href="#" id="getContent2">Тарифы</a></center>
+            </div>
+            <div id="Resourses" class="Button" style="top: 5px; left: 185px; line-height: 100pt; background: url(_img/res.png) repeat 0 0;">
+                <center><a href="#">Ресурсы</a></center>
+            </div>
+            <div id="Reports" class="Button" style="top: 5px; left: 275px; line-height: 100pt; background: url(_img/rep.png) repeat 0 0;">
+                <center><a href="#">Отчеты</a></center>
+            </div>
+        </div>
+        <div id="submenu" class="">
+
+        </div>
+        <div id="data" class="">
+
+        </div>
+        <main>
+        <div id="detail" class="" style="display: none;">
+            <table class="detail" width=100%>
+                <tr><td colspan="4" class="caption"><ul><li>Детализация проекта: #[@ID]</li><li id="close_detail" class="close" alt="Закрыть (Esq)">x</li></td></tr>
+                <tr><td><i>Документ основание</i></td><td>АА-327</td><td><i>Внутренний номер проекта</i></td><td id=project_id></td></tr>
+                <tr><td colspan=4><b>Информация о клиенте</b></td></tr>
+                <tr><td><i>Юр. лицо</i></td><td><a href="#" data-type="firm" id="ur_firm">ООО "Адамант"</a></td><td><i>Адрес</i></td><td><a href="#">Волковский пр., 32, лит. А</a></td></tr>
+                <tr><td><i>Объем услуг</i></td><td colspan=3>- КПД 10Мб</tr>
+                <tr><td><i>Инсталляция, руб.</i></td><td><a href="#" data-type="int">18000</a></td><td><i>Абонентская плата, руб.</i></td><td><a href="#" data-type="int">4800</a></td></tr>
+                <tr><td colspan=4><b>Аренда ресурсов</b></td></tr>
+                <tr><td><i><i>Оператор</i></i></td><td><a href="#" data-type="operator">Мегафон</a></td><td><i>Объект аренды</i></td><td><a href="#">КПД 10Мб</a></td></tr>
+                <tr><td><i>Инсталляция, руб.</i></td><td><a href="#" id="abon_plata" data-type="int">8000</a></td><td><i>Абонентская плата, руб.</i></td><td><a href="#" data-type="int">1800</a></td></tr>
+                <tr><td colspan=4><b>Операционные затраты</b></td></tr>
+                <tr><td><i>Оборудование и материалы, руб.</i></td><td><a href="#" data-type="v_o_m">8000</a></td><td><i>Работы, руб.</i></td><td><a href="#" data-type="sub_works">1800</a></td></tr>
+                <tr><td colspan=4><b>Комментарии по пректу:</b></td></tr>
+                <tr><td colspan=4></td></tr>
+            </table>
+        </div>
+        <div id="change_firm" class="" style="display: none;">
+            <input type="text" id="firm_name" maxlength=40>&nbsp;<input type="button" value="OK" style="font: 8pt Arial;" onclick='javascript:Change_TD($("#firm_name").data("sID"), $("#detail").data("ID"), $("#firm_name").val());'>
+            <a href="#" data-type='ООО ""'>ООО</a>&nbsp;
+            <a href="#" data-type='ОАО ""'>ОАО</a>&nbsp;
+            <a href="#" data-type='ЗАО ""'>ЗАО</a>&nbsp;
+            <a href="#" data-type='ПАО ""'>ПАО</a>&nbsp;
+            <a href="#" data-type='ИП ""'>ИП</a>&nbsp;
+        </div>
+        <div id="change_operator" class="" style="display: none;">
+            <table width=100%>
+                <tr><td>Наименование</td></tr>
+                <tr><td><a href="#">Билайн</a></td></tr>
+                <tr><td><a href="#">Мегафон</a></td></tr>
+                <tr><td><a href="#">МТС</a></td></tr>
+                <tr><td><a href="#">Радион</a></td></tr>
+                <tr><td><a href="#">Комфортел</a></td></tr>
+                <tr><td align=right><a href="#">+ Новый оператор</a><br></td></tr>
+            </table>
+        </div>
+        <div id="change_v_o_m" class="" style="display: none;">
+            <table width=100%>
+                <tr><td>Наименование</td><td>Количество</td><td>Стоимость за ед.</td><td>Итого по позиции</td><td>i</td></tr>
+            </table>
+        </div>
+
+        <div id="change_o_m" class="" style="display: none;" data-pid="">
+            <table width=100%>
+                <tr><td id="o_m_pos"></td><td id="o_m_pos"></td></tr>
+                <!-- <tr><td>Новое наименование</td><td>-</td><td><a href="#" class="a_button">+</a></td></tr> -->
+            </table>
+        </div>
+
+        <div id="view_sub_works" class="" style="display: none;">
+            <table width=100%>
+                <tr><td>Наименование</td><td>Количество</td><td>Стоимость за ед.</td><td>Итого по позиции</td><td>i</td></tr>
+            </table>
+        </div>
+
+        <div id="change_sub_works" class="" style="display: none;">
+            <table width=100%>
+                <tr><td>Наименование</td><td>Стоимость за ед.</td><td>i</td></tr>
+            </table>
+        </div>
+
+        <div id="change_numeric" class="" style="display: none;">
+            <input type="text" id="value_id" maxlength=10 >&nbsp;<input type="button" value="OK" style="font: 8pt Arial;" onclick='$("#change_numeric").hide(300);'>
+        </div>
+
+        <div id="change_data" class="" style="display: none;">
+            <input type="text" id="change_data_value" maxlength=10 >&nbsp;<input type="button" id="sendButton" value="OK" style="font: 8pt Arial;">
+        </div>
+
+        <div id="newComment" style="display: none;">
+            <table width=100%>
+                <tr><td class="caption"><ul><li>Добавить новый комментарий</li><li id="close_detail" class="close" alt="Закрыть (Esq)">x</li></td></tr>
+                <tr><td colspan=4><textarea id="comments" cols="30" rows="5" placeholder="Введите комментарий ... (ввод по ctrl+enter)"></textarea></td></tr>
+                <tr><td><input type="button" id="sendNewMessage" value="Отправить"></td></tr>
+            </table>
+        </div>
+        </main>
+
+
+    </body>
+</html>
